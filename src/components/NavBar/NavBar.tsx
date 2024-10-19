@@ -1,8 +1,10 @@
 import { AppBar, MenuItem, styled, Toolbar } from "@mui/material"
 
-const StyledToolbar = styled(Toolbar)(() => ({
+const StyledToolbar = styled(Toolbar)(({ theme}) => ({
   display:"flex",
   justifyContent: "space-evenly",
+  backgroundColor: theme.palette.primary.contrastText,
+  color: theme.palette.primary.main,
 }));
 
 const NavBar
@@ -13,6 +15,7 @@ const NavBar
         
         <AppBar position="relative">
             <StyledToolbar>
+            <MenuItem>Home</MenuItem>
             <MenuItem>About</MenuItem>
             <MenuItem>Skills</MenuItem>
             <MenuItem>Projects</MenuItem>

@@ -3,30 +3,31 @@ import { ReactNode } from "react";
 
 interface StyledButtonProps {
     children: ReactNode
+    onClick: () => void
 }
 
 const StyledButton: React.FC<StyledButtonProps>
- = ({children}) => {
+ = ({children, onClick}) => {
 
     const StyledButton = styled("button")(({ theme }) => ({
       backgroundColor: "transparent",
-      border: `1px solid ${theme.palette.primary.contrastText}`,
+      border: `2px solid ${theme.palette.primary.main}`,
       borderRadius: "3px",
       padding: "5px 15px",
       width: "100%",
-      color: theme.palette.primary.contrastText,
+      color: theme.palette.primary.main,
       display: "inline-flex",
       alignItems: "center",
       justifyContent: "center",
       gap:"10px",
       '&:hover': {
-        backgroundColor: theme.palette.secondary.main
+        backgroundColor: theme.palette.secondary.light
       }
     }));
 
     return (
       <>
-        <StyledButton>
+        <StyledButton onClick={onClick}>
             {children}
         </StyledButton>
       </>
