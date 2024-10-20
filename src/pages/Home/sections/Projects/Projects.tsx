@@ -45,32 +45,28 @@ const Projects = () => {
             image: "/public/images/perfil.jpg",
             description: "Descrição do Projeto 1",
             techDescription: "Tecnologias usadas: React, Node.js, MongoDB",
-            button1Label: "Ver Detalhes",
-            button2Label: "Visitar Site",
+            button1Label: "View Code",
         },
         {
             title: "Projeto 2",
             image: "/path/to/image2.jpg",
             description: "Descrição do Projeto 2",
             techDescription: "Tecnologias usadas: Vue.js, Laravel, PostgreSQL",
-            button1Label: "Ver Detalhes",
-            button2Label: "GitHub Repo",
+            button1Label: "View Code",
         },
         {
             title: "Projeto 2",
             image: "/path/to/image2.jpg",
             description: "Descrição do Projeto 2",
             techDescription: "Tecnologias usadas: Vue.js, Laravel, PostgreSQL",
-            button1Label: "Ver Detalhes",
-            button2Label: "GitHub Repo",
+            button1Label: "View Code",
         },
         {
             title: "Projeto 2",
             image: "/path/to/image2.jpg",
             description: "Descrição do Projeto 2",
             techDescription: "Tecnologias usadas: Vue.js, Laravel, PostgreSQL",
-            button1Label: "Ver Detalhes",
-            button2Label: "GitHub Repo",
+            button1Label: "View Code",
         },
     ];
 
@@ -90,9 +86,6 @@ const Projects = () => {
                             <ProjectButtons>
                                 <StyledButton onClick={() => console.log(project.button1Label)}>
                                     <Typography>{project.button1Label}</Typography>
-                                </StyledButton>
-                                <StyledButton onClick={() => console.log(project.button2Label)}>
-                                    <Typography>{project.button2Label}</Typography>
                                 </StyledButton>
                             </ProjectButtons>
                         </ProjectCard>

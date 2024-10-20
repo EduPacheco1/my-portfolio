@@ -6,6 +6,7 @@ import StyledButton from "../../../../components/StyledButton";
 import { AnimatedBackground } from "../../../../components/AnimatedBackGround/AnimatedBackGround";
 
 const Hero = () => {
+
     const StyledHero = styled("div")(({ theme }) => ({
         backgroundColor: theme.palette.primary.contrastText,
         minHeight: "100vh",
@@ -32,6 +33,23 @@ const Hero = () => {
         objectFit: "contain",
     }));
 
+    const handleDownloadCV = () => {
+
+        const pdfUrl = '/public/curriculo/CurriculoAtualizado.pdf';
+
+        window.open(pdfUrl, '_blank');
+    };
+
+    const handleContactMe = () => {
+        const yourEmail = "edu.pacheco.carvalho@gmail.com";
+        const subject = "Contact from Eduardo Pacheco Portfolio";
+        const body = "Hi Eduardo,\n\n I'm reaching out from your portfolio website. ";
+
+        const emailLink = `mailto:${yourEmail}?subject=${subject}&body=${encodeURIComponent(body)}`;
+
+        window.location.href = emailLink;
+    };
+
     return (
         <StyledHero>
             <Container maxWidth="lg">
@@ -47,18 +65,25 @@ const Hero = () => {
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={6} lg={8}>
-                        <Typography color="primary.main" variant="h1" textAlign="center" gutterBottom>Eduardo Pacheco</Typography>
+                        <Typography
+                            color="primary.main"
+                            variant="h1"
+                            textAlign="center"
+                            gutterBottom
+                        >
+                            Eduardo Pacheco
+                        </Typography>
                         <Typography color="primary.main" variant="h2" textAlign="center" gutterBottom>I'm a Software Engineer</Typography>
                         <Box mt={4}>
                             <Grid container spacing={2} justifyContent="center">
                                 <Grid item xs={12} sm={6} md={6} lg={4}>
-                                    <StyledButton onClick={() => console.log("download")}>
+                                    <StyledButton onClick={handleDownloadCV}>
                                         <DownloadingIcon />
                                         <Typography>Download CV</Typography>
                                     </StyledButton>
                                 </Grid>
                                 <Grid item xs={12} sm={6} md={6} lg={4}>
-                                    <StyledButton onClick={() => console.log("contact")}>
+                                    <StyledButton onClick={handleContactMe}>
                                         <InboxIcon />
                                         <Typography>Contact me</Typography>
                                     </StyledButton>

@@ -6,19 +6,18 @@ import Projects from "./sections/Projects/Projects"
 import Skills from "./sections/Skills/Skills"
 
 const Home
- = () => {
+  = () => {
 
     return (
       <>
         <NavBar />
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
+        <div id="hero"><Hero /></div>
+        <div id="about"><About /></div>
+        <div id="skills"><Skills /></div>
+        <div id="projects"><Projects /></div>
         <Footer />
       </>
     )
   }
-  
-  export default Home
-  
+
+export default Home
